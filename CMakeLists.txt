@@ -1,24 +1,31 @@
 cmake_minimum_required(VERSION 3.31)
-project(Elegant_Game_Engine)
+project(Elegant_Game_Engine LANGUAGES CXX)
+
+option(ENABLE_PHYSICS "Build Physics Module" ON)
+option(ENABLE_AUDIO "Build Audio Module" ON)
 
 set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_ASM_STANDARD_REQUIRED ON)
 
+add_subdirectory(Engine/Base)
+add_subdirectory(Engine/Memory)
+add_subdirectory(Engine/Utility)
 
-include_directories(${PROJECT_SOURCE_DIR}/util)
-add_subdirectory(external/glfw)
-add_library(glad STATIC external/glad/src/glad.c)
-target_include_directories(glad PUBLIC external/glad/include)
+if (ENABLE_PHYSICS)
+    add_subdirectory(Engine/Modules/Physics)
+endif ()
 
-include_directories(
-        external/glad/include
-        external/glfw/include
-        src
-)
+if (ENABLE_AUDIO)
+    add_subdirectory(Engine/Modules/Audio)
+endif ()
 
-add_executable(Elegant_Game_Engine src/main.cpp
-        util/config.h)
+add_subdirectory(Engine/Modules/Graphics)
+add_subdirectory(Engine/Managers)
+add_subdirectory(Engine/Tools)
 
-target_link_libraries(${PROJECT_NAME}
-glfw
-glad
-${CMAKE_DL_LIBS})
+add_executable(EditorApp Editor/src/main.cpp)
+target_link_libraries(EditorApp PUBLIC
+    Base Memory Utility Graphics
+    $<$<BOOL:${ENABLE_PHYSICS}>:Physics>
+    $<$<BOOL:${ENABLE_AUDIO}>:Audio>
+    Managers)
