@@ -9,5 +9,15 @@
 | 4.0.x   | :white_check_mark: |
 | < 4.0   | :x:                |
 
-## Reporting a Vulnerability
-if there is a vulnerability in the engine, please email this account: elegant-engine@gmail.com do NOT post it as an issue.
+### Reporting a Vulnerability
+If you discover a security vulnerability in the Elegant Game Engine, please **do not** file a public issue. Instead, report it privately to our security team so we can investigate and address the issue responsibly.
+
+**Contact:** elegant.game.engine@gmail.com
+Please Include:
+ - A detailed description of the vulnerability
+ - Steps to reproduce (if possible)
+ - Any relevant logs or screenshots
+
+Our team will acknowledge the receipt of you report within 3-4 business days and will strive to resolve it any confirmed vulnerabilities as quickly as possible. if needed, we will coordinate with you on public disclosure.
+
+Thank you for keeping this engine safe!
