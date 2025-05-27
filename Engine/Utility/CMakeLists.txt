@@ -1,6 +1,7 @@
 add_library(Utility STATIC
     src/Logger.cpp
-    src/Serializer.cpp)
+    src/Serializer.cpp
+    src/Timer.cpp)
 
 target_include_directories(Utility PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)

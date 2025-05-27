@@ -84,4 +84,6 @@ namespace Engine::Base::Math {
     inline float FastCos(float x) {
         return FastSin(x + HALF_PI);
     }
+
+
 }

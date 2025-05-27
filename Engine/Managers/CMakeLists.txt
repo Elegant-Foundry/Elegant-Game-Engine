@@ -1,6 +1,7 @@
 add_library(Managers STATIC
     src/SceneManager.cpp
-    src/InputManager.cpp)
+    src/InputManager.cpp
+    src/GameLoop.cpp)
 
 target_include_directories(Managers PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
