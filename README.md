@@ -32,7 +32,7 @@
 ### Requirements
 
 - Linux desktop (primary target, other platforms may be supported in the future)
-- [List other dependencies as they become relevant, e.g., CMake, Python, Vulkan SDK, .NET, etc.]
+- TODO: create list of dependencies
 
 ### Building the Engine
 
@@ -43,7 +43,7 @@ Instructions for building will be updated as the project evolves. For now:
    git clone https://github.com/Elegant-Foundry/Elegant-Game-Engine.git
    cd Elegant-Game-Engine
    ```
-2. [Add build instructions here for CMake, Python, .NET, etc.]
+2. TODO: create installation instructions
 
 ### Running Example Projects
 
@@ -66,7 +66,7 @@ You’ll find:
 
 We welcome and encourage contributions from the community!
 - Submit bug reports, feature requests, or pull requests via GitHub.
-- See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines (if available).
+- See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
