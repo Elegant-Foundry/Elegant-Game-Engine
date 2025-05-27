@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.31)
 project(Elegant_Game_Engine LANGUAGES CXX)
 
-option(ENABLE_PHYSICS "Build Physics Module" ON)
-option(ENABLE_AUDIO "Build Audio Module" ON)
+option(ENABLE_PHYSICS "Build Physics Module" OFF)
+option(ENABLE_AUDIO "Build Audio Module" OFF)
 
 set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_ASM_STANDARD_REQUIRED ON)
